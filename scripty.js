@@ -43,7 +43,7 @@ submit.addEventListener('click', (e) => {
                 let tempo = document.querySelector('.tempo');
                 tempo.innerHTML =
                     `
-                Temperature: &nbsp;&nbsp;&nbsp;&nbsp;${(data.main.temp - 273.15).toFixed(2)} &deg;C<br>
+                Temperature: &nbsp;&nbsp;&nbsp;&nbsp;${(data.main.temp - 273.15).toFixed(1)} &deg;C<br>
                 Description: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.weather[0].description} <br>
                 Humidity: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.main.humidity}
                 <br><br>
