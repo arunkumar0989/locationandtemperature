@@ -32,13 +32,25 @@ submit.addEventListener('click', (e) => {
         function success(position) {
             let { latitude, longitude } = position.coords;
             console.log(latitude, longitude);
-            let url = `http://api.weatherstack.com/current?access_key=93591bc5d2682df4e653c9be35b3b1ae&query=${latitude},${longitude}`;
+            let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=0a1f4c7a28a83efd43e3ed98c4734f4d`;
             console.log(url);
 
             fetch(url).then((response) => response.json()).then((data) => {
 
-                console.log(data);
+                console.log(data.main.temp - 273.15);
+                console.log(data.weather[0].description)
 
+                let tempo = document.querySelector('.tempo');
+                tempo.innerHTML =
+                    `
+                Temperature: &nbsp;&nbsp;&nbsp;&nbsp;${data.main.temp - 273.15} &deg;C<br>
+                Description: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.weather[0].description} <br>
+                Humidity: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.main.humidity}
+                <br><br>
+                That is all, We got. Stay tuned for more !
+
+
+                `;
 
             })
 
