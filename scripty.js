@@ -19,7 +19,7 @@ submit.addEventListener('click', (e) => {
              City: &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; ${data.city}  <br>
             State: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; ${data.region}  <br>
             IP Address: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${data.ip}  <br>
-            Country Code: &nbsp;${data.postal}<br>
+            City Code: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.postal}<br>
             Country: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.country_name}<br>
 
             `;
