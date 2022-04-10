@@ -37,13 +37,13 @@ submit.addEventListener('click', (e) => {
 
             fetch(url).then((response) => response.json()).then((data) => {
 
-                console.log(data.main.temp - 273.15);
+                console.log((data.main.temp - 273.15).toFixed(2));
                 console.log(data.weather[0].description)
 
                 let tempo = document.querySelector('.tempo');
                 tempo.innerHTML =
                     `
-                Temperature: &nbsp;&nbsp;&nbsp;&nbsp;${data.main.temp - 273.15} &deg;C<br>
+                Temperature: &nbsp;&nbsp;&nbsp;&nbsp;${(data.main.temp - 273.15).toFixed(2)} &deg;C<br>
                 Description: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.weather[0].description} <br>
                 Humidity: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.main.humidity}
                 <br><br>
