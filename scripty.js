@@ -36,15 +36,10 @@ submit.addEventListener('click', (e) => {
             console.log(url);
 
             fetch(url).then((response) => response.json()).then((data) => {
-                let tempo = document.querySelector('.tempo');
-                tempo.innerHTML =
-                    `
-                Temperature: &nbsp;&nbsp;&nbsp;&nbsp;${data.current.temperature} &deg;C<br>
-                Description: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${data.current.weather_descriptions} <br><br>
-                That is all, We got. Stay tuned for more !
-                
-                
-                `;
+
+                console.log(data);
+
+
             })
 
         }
